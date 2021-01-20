@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script> 
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> 
+        <script type="text/babel">
+            function Mylist(props){
+                const arr = props.data;
+                const listItems = arr.map((val, index) => <li key = {index}>{val}</li>);
+                return <ul>{listItems}</ul>;
+            }
+
+            const arr = ["A", "B", "C", "D"];
+            const el = <Mylist data = {arr} />;
+            ReactDOM.render(
+                el,
+                document.getElementById('container')
+            );
+        </script>
+    </head>
+    <body>
+        <div id = "container">
+
+        </div>
+    </body>
+</html>
